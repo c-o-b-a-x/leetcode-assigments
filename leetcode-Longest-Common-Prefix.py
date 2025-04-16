@@ -27,12 +27,10 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        pref = ''
+        prefix = ''
         for i in range(len(strs[0])):
             for a in strs:
                 if i>=len(a) or a[i]!=strs[0][i]:
-                    return pref
-            pref+=strs[0][i]
-        return pref
-
-Solution.longestCommonPrefix()
+                    return prefix
+            prefix+=strs[0][i]
+        return prefix
